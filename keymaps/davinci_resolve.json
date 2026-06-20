@@ -1,0 +1,26 @@
+{
+  "profile": "DaVinci Resolve",
+  "version": "1.0",
+  "bindings": [
+    {"key": "B", "action": "cut", "mod": "", "desc": "Blade/Faca (cortar)"},
+    {"key": "A", "action": "select", "mod": "", "desc": "Ferramenta selecao"},
+    {"key": "Space", "action": "play_pause", "mod": "", "desc": "Play/Pause"},
+    {"key": "=", "action": "zoom_in", "mod": "", "desc": "Zoom in"},
+    {"key": "-", "action": "zoom_out", "mod": "", "desc": "Zoom out"},
+    {"key": "Left", "action": "prev_frame", "mod": "", "desc": "Frame anterior"},
+    {"key": "Right", "action": "next_frame", "mod": "", "desc": "Proximo frame"},
+    {"key": "Up", "action": "prev_clip", "mod": "", "desc": "Clip anterior"},
+    {"key": "Down", "action": "next_clip", "mod": "", "desc": "Proximo clip"},
+    {"key": "Delete", "action": "ripple_delete", "mod": "", "desc": "Deletar com ripple"},
+    {"key": "T", "action": "trim_mode", "mod": "", "desc": "Modo trim"},
+    {"key": "M", "action": "marker", "mod": "", "desc": "Adicionar marcador"},
+    {"key": "I", "action": "mark_in", "mod": "", "desc": "Marca de inicio"},
+    {"key": "O", "action": "mark_out", "mod": "", "desc": "Marca de fim"},
+    {"key": "Z", "action": "undo", "mod": "Ctrl", "desc": "Desfazer"},
+    {"key": "S", "action": "save", "mod": "Ctrl", "desc": "Salvar"},
+    {"key": "N", "action": "new_timeline", "mod": "Ctrl", "desc": "Nova timeline"},
+    {"key": "W", "action": "close", "mod": "Ctrl", "desc": "Fechar"},
+    {"key": "F", "action": "fullscreen", "mod": "Ctrl", "desc": "Tela cheia"},
+    {"key": "D", "action": "duplicate", "mod": "Ctrl", "desc": "Duplicar"}
+  ]
+}

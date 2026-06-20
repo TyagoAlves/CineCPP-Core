@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -march=x86-64-v3 CMakeFiles/cinecpp.dir/src/main.cpp.o CMakeFiles/cinecpp.dir/src/input_manager.cpp.o CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o -o cinecpp 

@@ -1,0 +1,28 @@
+{
+  "profile": "Adobe Premiere Pro",
+  "version": "1.0",
+  "bindings": [
+    {"key": "C", "action": "cut", "mod": "", "desc": "Cortar no playhead"},
+    {"key": "V", "action": "select", "mod": "", "desc": "Ferramenta selecao"},
+    {"key": "Space", "action": "play_pause", "mod": "", "desc": "Play/Pause"},
+    {"key": "Z", "action": "zoom_in", "mod": "", "desc": "Zoom in timeline"},
+    {"key": "X", "action": "zoom_out", "mod": "", "desc": "Zoom out timeline"},
+    {"key": "Up", "action": "nudge_up", "mod": "", "desc": "Frame anterior"},
+    {"key": "Down", "action": "nudge_down", "mod": "", "desc": "Proximo frame"},
+    {"key": "Left", "action": "trim_in", "mod": "", "desc": "Aparar inicio"},
+    {"key": "Right", "action": "trim_out", "mod": "", "desc": "Aparar fim"},
+    {"key": "Delete", "action": "ripple_delete", "mod": "", "desc": "Delecao com ripple"},
+    {"key": "S", "action": "split", "mod": "", "desc": "Dividir clip"},
+    {"key": "Q", "action": "select_left", "mod": "", "desc": "Selecionar esquerda"},
+    {"key": "W", "action": "select_right", "mod": "", "desc": "Selecionar direita"},
+    {"key": "E", "action": "extend_edit", "mod": "", "desc": "Edicao estendida"},
+    {"key": "R", "action": "rate_stretch", "mod": "", "desc": "Velocidade"},
+    {"key": "T", "action": "text_tool", "mod": "", "desc": "Ferramenta texto"},
+    {"key": "P", "action": "pen_tool", "mod": "", "desc": "Caneta"},
+    {"key": "H", "action": "hand_tool", "mod": "", "desc": "Mao"},
+    {"key": "Z", "action": "zoom_tool", "mod": "Ctrl", "desc": "Zoom (com Ctrl)"},
+    {"key": "Z", "action": "undo", "mod": "Ctrl", "desc": "Desfazer"},
+    {"key": "S", "action": "save", "mod": "Ctrl", "desc": "Salvar"},
+    {"key": "N", "action": "new_project", "mod": "Ctrl", "desc": "Novo projeto"}
+  ]
+}

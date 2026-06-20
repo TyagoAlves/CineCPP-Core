@@ -1,0 +1,21 @@
+{
+  "profile": "Affinity",
+  "version": "1.0",
+  "bindings": [
+    {"key": "C", "action": "cut", "mod": "", "desc": "Cortar"},
+    {"key": "V", "action": "select", "mod": "", "desc": "Ferramenta mover"},
+    {"key": "Space", "action": "play_pause", "mod": "", "desc": "Play/Pause"},
+    {"key": "Ctrl++", "action": "zoom_in", "mod": "", "desc": "Zoom in"},
+    {"key": "Ctrl+-", "action": "zoom_out", "mod": "", "desc": "Zoom out"},
+    {"key": "Left", "action": "prev_frame", "mod": "", "desc": "Frame anterior"},
+    {"key": "Right", "action": "next_frame", "mod": "", "desc": "Proximo frame"},
+    {"key": "Delete", "action": "delete", "mod": "", "desc": "Deletar"},
+    {"key": "Z", "action": "undo", "mod": "Ctrl", "desc": "Desfazer"},
+    {"key": "Y", "action": "redo", "mod": "Ctrl", "desc": "Refazer"},
+    {"key": "S", "action": "save", "mod": "Ctrl", "desc": "Salvar"},
+    {"key": "P", "action": "pen_tool", "mod": "", "desc": "Caneta"},
+    {"key": "B", "action": "brush_tool", "mod": "", "desc": "Pincel"},
+    {"key": "E", "action": "eraser", "mod": "", "desc": "Borracha"},
+    {"key": "N", "action": "new_document", "mod": "Ctrl", "desc": "Novo documento"}
+  ]
+}
