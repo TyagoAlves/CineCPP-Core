@@ -72,6 +72,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.22/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindPkgConfig.cmake"
@@ -99,7 +100,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/cinecpp_core.dir/DependInfo.cmake"
   "CMakeFiles/cinecpp.dir/DependInfo.cmake"
+  "CMakeFiles/cinecpp-gui.dir/DependInfo.cmake"
   "CMakeFiles/test_input_manager.dir/DependInfo.cmake"
   "CMakeFiles/test_timeline.dir/DependInfo.cmake"
   )

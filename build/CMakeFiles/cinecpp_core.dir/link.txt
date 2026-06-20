@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcinecpp_core.a CMakeFiles/cinecpp_core.dir/src/input_manager.cpp.o CMakeFiles/cinecpp_core.dir/src/timeline_engine.cpp.o CMakeFiles/cinecpp_core.dir/src/keybinding_engine.cpp.o CMakeFiles/cinecpp_core.dir/src/ffmpeg_reader.cpp.o
+/usr/bin/ranlib libcinecpp_core.a

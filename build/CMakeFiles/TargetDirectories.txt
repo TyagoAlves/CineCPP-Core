@@ -1,4 +1,6 @@
+/src/build/CMakeFiles/cinecpp_core.dir
 /src/build/CMakeFiles/cinecpp.dir
+/src/build/CMakeFiles/cinecpp-gui.dir
 /src/build/CMakeFiles/test_input_manager.dir
 /src/build/CMakeFiles/test_timeline.dir
 /src/build/CMakeFiles/edit_cache.dir

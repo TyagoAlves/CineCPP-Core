@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cinecpp_core
+
+# Build rule for target.
+cinecpp_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cinecpp_core
+.PHONY : cinecpp_core
+
+# fast build rule for target.
+cinecpp_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/build
+.PHONY : cinecpp_core/fast
+
+#=============================================================================
 # Target rules for targets named cinecpp
 
 # Build rule for target.
@@ -128,6 +141,19 @@ cinecpp: cmake_check_build_system
 cinecpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/build
 .PHONY : cinecpp/fast
+
+#=============================================================================
+# Target rules for targets named cinecpp-gui
+
+# Build rule for target.
+cinecpp-gui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cinecpp-gui
+.PHONY : cinecpp-gui
+
+# fast build rule for target.
+cinecpp-gui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/build
+.PHONY : cinecpp-gui/fast
 
 #=============================================================================
 # Target rules for targets named test_input_manager
@@ -160,7 +186,7 @@ src/ffmpeg_reader.o: src/ffmpeg_reader.cpp.o
 
 # target to build an object file
 src/ffmpeg_reader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/ffmpeg_reader.cpp.o
 .PHONY : src/ffmpeg_reader.cpp.o
 
 src/ffmpeg_reader.i: src/ffmpeg_reader.cpp.i
@@ -168,7 +194,7 @@ src/ffmpeg_reader.i: src/ffmpeg_reader.cpp.i
 
 # target to preprocess a source file
 src/ffmpeg_reader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/ffmpeg_reader.cpp.i
 .PHONY : src/ffmpeg_reader.cpp.i
 
 src/ffmpeg_reader.s: src/ffmpeg_reader.cpp.s
@@ -176,15 +202,39 @@ src/ffmpeg_reader.s: src/ffmpeg_reader.cpp.s
 
 # target to generate assembly for a file
 src/ffmpeg_reader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/ffmpeg_reader.cpp.s
 .PHONY : src/ffmpeg_reader.cpp.s
+
+src/gui.o: src/gui.cpp.o
+.PHONY : src/gui.o
+
+# target to build an object file
+src/gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/gui.cpp.o
+.PHONY : src/gui.cpp.o
+
+src/gui.i: src/gui.cpp.i
+.PHONY : src/gui.i
+
+# target to preprocess a source file
+src/gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/gui.cpp.i
+.PHONY : src/gui.cpp.i
+
+src/gui.s: src/gui.cpp.s
+.PHONY : src/gui.s
+
+# target to generate assembly for a file
+src/gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/gui.cpp.s
+.PHONY : src/gui.cpp.s
 
 src/input_manager.o: src/input_manager.cpp.o
 .PHONY : src/input_manager.o
 
 # target to build an object file
 src/input_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/input_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/input_manager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/input_manager.cpp.o
 .PHONY : src/input_manager.cpp.o
 
@@ -193,7 +243,7 @@ src/input_manager.i: src/input_manager.cpp.i
 
 # target to preprocess a source file
 src/input_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/input_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/input_manager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/input_manager.cpp.i
 .PHONY : src/input_manager.cpp.i
 
@@ -202,7 +252,7 @@ src/input_manager.s: src/input_manager.cpp.s
 
 # target to generate assembly for a file
 src/input_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/input_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/input_manager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/input_manager.cpp.s
 .PHONY : src/input_manager.cpp.s
 
@@ -211,7 +261,7 @@ src/keybinding_engine.o: src/keybinding_engine.cpp.o
 
 # target to build an object file
 src/keybinding_engine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/keybinding_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/keybinding_engine.cpp.o
 .PHONY : src/keybinding_engine.cpp.o
 
@@ -220,7 +270,7 @@ src/keybinding_engine.i: src/keybinding_engine.cpp.i
 
 # target to preprocess a source file
 src/keybinding_engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/keybinding_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/keybinding_engine.cpp.i
 .PHONY : src/keybinding_engine.cpp.i
 
@@ -229,7 +279,7 @@ src/keybinding_engine.s: src/keybinding_engine.cpp.s
 
 # target to generate assembly for a file
 src/keybinding_engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/keybinding_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input_manager.dir/build.make CMakeFiles/test_input_manager.dir/src/keybinding_engine.cpp.s
 .PHONY : src/keybinding_engine.cpp.s
 
@@ -239,6 +289,7 @@ src/main.o: src/main.cpp.o
 # target to build an object file
 src/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -247,6 +298,7 @@ src/main.i: src/main.cpp.i
 # target to preprocess a source file
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -255,6 +307,7 @@ src/main.s: src/main.cpp.s
 # target to generate assembly for a file
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/timeline_engine.o: src/timeline_engine.cpp.o
@@ -262,7 +315,7 @@ src/timeline_engine.o: src/timeline_engine.cpp.o
 
 # target to build an object file
 src/timeline_engine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/timeline_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timeline.dir/build.make CMakeFiles/test_timeline.dir/src/timeline_engine.cpp.o
 .PHONY : src/timeline_engine.cpp.o
 
@@ -271,7 +324,7 @@ src/timeline_engine.i: src/timeline_engine.cpp.i
 
 # target to preprocess a source file
 src/timeline_engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/timeline_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timeline.dir/build.make CMakeFiles/test_timeline.dir/src/timeline_engine.cpp.i
 .PHONY : src/timeline_engine.cpp.i
 
@@ -280,7 +333,7 @@ src/timeline_engine.s: src/timeline_engine.cpp.s
 
 # target to generate assembly for a file
 src/timeline_engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp.dir/build.make CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp_core.dir/build.make CMakeFiles/cinecpp_core.dir/src/timeline_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timeline.dir/build.make CMakeFiles/test_timeline.dir/src/timeline_engine.cpp.s
 .PHONY : src/timeline_engine.cpp.s
 
@@ -332,6 +385,174 @@ tests/test_timeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timeline.dir/build.make CMakeFiles/test_timeline.dir/tests/test_timeline.cpp.s
 .PHONY : tests/test_timeline.cpp.s
 
+third_party/imgui/backends/imgui_impl_opengl3.o: third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+third_party/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+
+third_party/imgui/backends/imgui_impl_opengl3.i: third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+third_party/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+
+third_party/imgui/backends/imgui_impl_opengl3.s: third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+third_party/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+
+third_party/imgui/backends/imgui_impl_sdl2.o: third_party/imgui/backends/imgui_impl_sdl2.cpp.o
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.o
+
+# target to build an object file
+third_party/imgui/backends/imgui_impl_sdl2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_sdl2.cpp.o
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.cpp.o
+
+third_party/imgui/backends/imgui_impl_sdl2.i: third_party/imgui/backends/imgui_impl_sdl2.cpp.i
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.i
+
+# target to preprocess a source file
+third_party/imgui/backends/imgui_impl_sdl2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_sdl2.cpp.i
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.cpp.i
+
+third_party/imgui/backends/imgui_impl_sdl2.s: third_party/imgui/backends/imgui_impl_sdl2.cpp.s
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.s
+
+# target to generate assembly for a file
+third_party/imgui/backends/imgui_impl_sdl2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/backends/imgui_impl_sdl2.cpp.s
+.PHONY : third_party/imgui/backends/imgui_impl_sdl2.cpp.s
+
+third_party/imgui/imgui.o: third_party/imgui/imgui.cpp.o
+.PHONY : third_party/imgui/imgui.o
+
+# target to build an object file
+third_party/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui.cpp.o
+.PHONY : third_party/imgui/imgui.cpp.o
+
+third_party/imgui/imgui.i: third_party/imgui/imgui.cpp.i
+.PHONY : third_party/imgui/imgui.i
+
+# target to preprocess a source file
+third_party/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui.cpp.i
+.PHONY : third_party/imgui/imgui.cpp.i
+
+third_party/imgui/imgui.s: third_party/imgui/imgui.cpp.s
+.PHONY : third_party/imgui/imgui.s
+
+# target to generate assembly for a file
+third_party/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui.cpp.s
+.PHONY : third_party/imgui/imgui.cpp.s
+
+third_party/imgui/imgui_demo.o: third_party/imgui/imgui_demo.cpp.o
+.PHONY : third_party/imgui/imgui_demo.o
+
+# target to build an object file
+third_party/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_demo.cpp.o
+.PHONY : third_party/imgui/imgui_demo.cpp.o
+
+third_party/imgui/imgui_demo.i: third_party/imgui/imgui_demo.cpp.i
+.PHONY : third_party/imgui/imgui_demo.i
+
+# target to preprocess a source file
+third_party/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_demo.cpp.i
+.PHONY : third_party/imgui/imgui_demo.cpp.i
+
+third_party/imgui/imgui_demo.s: third_party/imgui/imgui_demo.cpp.s
+.PHONY : third_party/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+third_party/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_demo.cpp.s
+.PHONY : third_party/imgui/imgui_demo.cpp.s
+
+third_party/imgui/imgui_draw.o: third_party/imgui/imgui_draw.cpp.o
+.PHONY : third_party/imgui/imgui_draw.o
+
+# target to build an object file
+third_party/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_draw.cpp.o
+.PHONY : third_party/imgui/imgui_draw.cpp.o
+
+third_party/imgui/imgui_draw.i: third_party/imgui/imgui_draw.cpp.i
+.PHONY : third_party/imgui/imgui_draw.i
+
+# target to preprocess a source file
+third_party/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_draw.cpp.i
+.PHONY : third_party/imgui/imgui_draw.cpp.i
+
+third_party/imgui/imgui_draw.s: third_party/imgui/imgui_draw.cpp.s
+.PHONY : third_party/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+third_party/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_draw.cpp.s
+.PHONY : third_party/imgui/imgui_draw.cpp.s
+
+third_party/imgui/imgui_tables.o: third_party/imgui/imgui_tables.cpp.o
+.PHONY : third_party/imgui/imgui_tables.o
+
+# target to build an object file
+third_party/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_tables.cpp.o
+.PHONY : third_party/imgui/imgui_tables.cpp.o
+
+third_party/imgui/imgui_tables.i: third_party/imgui/imgui_tables.cpp.i
+.PHONY : third_party/imgui/imgui_tables.i
+
+# target to preprocess a source file
+third_party/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_tables.cpp.i
+.PHONY : third_party/imgui/imgui_tables.cpp.i
+
+third_party/imgui/imgui_tables.s: third_party/imgui/imgui_tables.cpp.s
+.PHONY : third_party/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+third_party/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_tables.cpp.s
+.PHONY : third_party/imgui/imgui_tables.cpp.s
+
+third_party/imgui/imgui_widgets.o: third_party/imgui/imgui_widgets.cpp.o
+.PHONY : third_party/imgui/imgui_widgets.o
+
+# target to build an object file
+third_party/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_widgets.cpp.o
+.PHONY : third_party/imgui/imgui_widgets.cpp.o
+
+third_party/imgui/imgui_widgets.i: third_party/imgui/imgui_widgets.cpp.i
+.PHONY : third_party/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+third_party/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_widgets.cpp.i
+.PHONY : third_party/imgui/imgui_widgets.cpp.i
+
+third_party/imgui/imgui_widgets.s: third_party/imgui/imgui_widgets.cpp.s
+.PHONY : third_party/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+third_party/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cinecpp-gui.dir/build.make CMakeFiles/cinecpp-gui.dir/third_party/imgui/imgui_widgets.cpp.s
+.PHONY : third_party/imgui/imgui_widgets.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -341,11 +562,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cinecpp"
+	@echo "... cinecpp-gui"
+	@echo "... cinecpp_core"
 	@echo "... test_input_manager"
 	@echo "... test_timeline"
 	@echo "... src/ffmpeg_reader.o"
 	@echo "... src/ffmpeg_reader.i"
 	@echo "... src/ffmpeg_reader.s"
+	@echo "... src/gui.o"
+	@echo "... src/gui.i"
+	@echo "... src/gui.s"
 	@echo "... src/input_manager.o"
 	@echo "... src/input_manager.i"
 	@echo "... src/input_manager.s"
@@ -364,6 +590,27 @@ help:
 	@echo "... tests/test_timeline.o"
 	@echo "... tests/test_timeline.i"
 	@echo "... tests/test_timeline.s"
+	@echo "... third_party/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... third_party/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... third_party/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... third_party/imgui/backends/imgui_impl_sdl2.o"
+	@echo "... third_party/imgui/backends/imgui_impl_sdl2.i"
+	@echo "... third_party/imgui/backends/imgui_impl_sdl2.s"
+	@echo "... third_party/imgui/imgui.o"
+	@echo "... third_party/imgui/imgui.i"
+	@echo "... third_party/imgui/imgui.s"
+	@echo "... third_party/imgui/imgui_demo.o"
+	@echo "... third_party/imgui/imgui_demo.i"
+	@echo "... third_party/imgui/imgui_demo.s"
+	@echo "... third_party/imgui/imgui_draw.o"
+	@echo "... third_party/imgui/imgui_draw.i"
+	@echo "... third_party/imgui/imgui_draw.s"
+	@echo "... third_party/imgui/imgui_tables.o"
+	@echo "... third_party/imgui/imgui_tables.i"
+	@echo "... third_party/imgui/imgui_tables.s"
+	@echo "... third_party/imgui/imgui_widgets.o"
+	@echo "... third_party/imgui/imgui_widgets.i"
+	@echo "... third_party/imgui/imgui_widgets.s"
 .PHONY : help
 
 

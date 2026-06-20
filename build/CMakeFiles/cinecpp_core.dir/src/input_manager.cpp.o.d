@@ -1,4 +1,4 @@
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.o: \
+CMakeFiles/cinecpp_core.dir/src/input_manager.cpp.o: \
  /src/src/input_manager.cpp /usr/include/stdc-predef.h \
  /src/include/input_manager.h /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

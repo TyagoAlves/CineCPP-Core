@@ -83,81 +83,18 @@ CMakeFiles/cinecpp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cinecpp.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /src/src/main.cpp -o CMakeFiles/cinecpp.dir/src/main.cpp.s
 
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.o: CMakeFiles/cinecpp.dir/flags.make
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.o: ../src/input_manager.cpp
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.o: CMakeFiles/cinecpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cinecpp.dir/src/input_manager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cinecpp.dir/src/input_manager.cpp.o -MF CMakeFiles/cinecpp.dir/src/input_manager.cpp.o.d -o CMakeFiles/cinecpp.dir/src/input_manager.cpp.o -c /src/src/input_manager.cpp
-
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cinecpp.dir/src/input_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /src/src/input_manager.cpp > CMakeFiles/cinecpp.dir/src/input_manager.cpp.i
-
-CMakeFiles/cinecpp.dir/src/input_manager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cinecpp.dir/src/input_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /src/src/input_manager.cpp -o CMakeFiles/cinecpp.dir/src/input_manager.cpp.s
-
-CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o: CMakeFiles/cinecpp.dir/flags.make
-CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o: ../src/timeline_engine.cpp
-CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o: CMakeFiles/cinecpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o -MF CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o.d -o CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o -c /src/src/timeline_engine.cpp
-
-CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /src/src/timeline_engine.cpp > CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.i
-
-CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /src/src/timeline_engine.cpp -o CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.s
-
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o: CMakeFiles/cinecpp.dir/flags.make
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o: ../src/keybinding_engine.cpp
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o: CMakeFiles/cinecpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o -MF CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o.d -o CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o -c /src/src/keybinding_engine.cpp
-
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /src/src/keybinding_engine.cpp > CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.i
-
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /src/src/keybinding_engine.cpp -o CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.s
-
-CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o: CMakeFiles/cinecpp.dir/flags.make
-CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o: ../src/ffmpeg_reader.cpp
-CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o: CMakeFiles/cinecpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o -MF CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o.d -o CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o -c /src/src/ffmpeg_reader.cpp
-
-CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /src/src/ffmpeg_reader.cpp > CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.i
-
-CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /src/src/ffmpeg_reader.cpp -o CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.s
-
 # Object files for target cinecpp
 cinecpp_OBJECTS = \
-"CMakeFiles/cinecpp.dir/src/main.cpp.o" \
-"CMakeFiles/cinecpp.dir/src/input_manager.cpp.o" \
-"CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o" \
-"CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o" \
-"CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o"
+"CMakeFiles/cinecpp.dir/src/main.cpp.o"
 
 # External object files for target cinecpp
 cinecpp_EXTERNAL_OBJECTS =
 
 cinecpp: CMakeFiles/cinecpp.dir/src/main.cpp.o
-cinecpp: CMakeFiles/cinecpp.dir/src/input_manager.cpp.o
-cinecpp: CMakeFiles/cinecpp.dir/src/timeline_engine.cpp.o
-cinecpp: CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o
-cinecpp: CMakeFiles/cinecpp.dir/src/ffmpeg_reader.cpp.o
 cinecpp: CMakeFiles/cinecpp.dir/build.make
+cinecpp: libcinecpp_core.a
 cinecpp: CMakeFiles/cinecpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable cinecpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cinecpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cinecpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

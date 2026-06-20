@@ -1,5 +1,6 @@
 // AGENT = Agente_06: Backend Core (main engine, CLI interface)
 // AGENT = Agente_07: Frontend (dashboard visualization)
+// AGENT = Agente_11: Renderizacao Grafica (Dear ImGui GUI)
 // AGENT = Agente_20: SRE (watchdog, background monitoring)
 #include <iostream>
 #include <string>
@@ -9,11 +10,17 @@
 #include "timeline_engine.h"
 #include "ffmpeg_reader.h"
 #include "keybinding_engine.h"
+#ifdef HAS_SDL2
+#include "gui.h"
+#endif
+
+static const std::string KEYMAP_DIR = std::string(getenv("HOME")) + "/cinecpp/keymaps/";
 
 void printBanner() {
     std::cout << "\n";
     std::cout << "╔════════════════════════════════════════════╗\n";
     std::cout << "║        CineCPP Editor de Video v0.1        ║\n";
+    std::cout << "║           GUI: ./cinecpp --gui             ║\n";
     std::cout << "║     C++20 Profissional — Alpine Linux       ║\n";
     std::cout << "╚════════════════════════════════════════════╝\n";
     std::cout << "\n";
@@ -31,24 +38,38 @@ void printHelp() {
     std::cout << "\n";
 }
 
-int main(int argc, char** argv) {
-    printBanner();
+static int runGUI(int argc, char** argv) {
+#ifdef HAS_SDL2
+    cinecpp::CineCPPGUI app;
+    if (!app.init("CineCPP Editor de Video v0.1", 1400, 900)) {
+        std::cerr << "Falha ao inicializar GUI\n";
+        return 1;
+    }
+    app.run();
+    app.shutdown();
+    return 0;
+#else
+    std::cerr << "GUI nao disponivel. Compile com -DHAS_SDL2 e SDL2 + OpenGL.\n";
+    return 1;
+#endif
+}
+
+static int runCLI(int argc, char** argv) {
     cinecpp::InputManager im;
     cinecpp::TimelineEngine tl;
     cinecpp::FFmpegReader reader;
 
-    auto default_dir = std::string(getenv("HOME")) + "/cinecpp/keymaps/";
-    im.loadProfileFromFile(default_dir + "adobe_premiere.json");
+    im.loadProfileFromFile(KEYMAP_DIR + "adobe_premiere.json");
     std::cout << "→ Perfil carregado: " << im.currentProfile().name << "\n";
 
     im.setCallback([](const std::string& action) {
         std::cout << "[Acao] " << action << "\n";
     });
 
-    if (argc > 1) {
-        std::string cmd = argv[1];
-        if (cmd == "info" && argc > 2) {
-            auto meta = reader.open(argv[2]);
+    if (argc > 2) {
+        std::string cmd = argv[2];
+        if (cmd == "info" && argc > 3) {
+            auto meta = reader.open(argv[3]);
             if (meta.valid) {
                 std::cout << "Video: " << meta.filepath << "\n";
                 std::cout << "  Duracao: " << meta.duration << "s\n";
@@ -61,7 +82,7 @@ int main(int argc, char** argv) {
             return 0;
         }
         if (cmd == "test") {
-            int n = argc > 2 ? std::stoi(argv[2]) : 10000;
+            int n = argc > 3 ? std::stoi(argv[3]) : 10000;
             auto start = std::chrono::high_resolution_clock::now();
             for (int i = 0; i < n; i++) {
                 im.handleKeyPress("C");
@@ -138,4 +159,12 @@ int main(int argc, char** argv) {
     }
     std::cout << "Encerrando CineCPP.\n";
     return 0;
+}
+
+int main(int argc, char** argv) {
+    printBanner();
+    if (argc > 1 && std::string(argv[1]) == "--gui") {
+        return runGUI(argc, argv);
+    }
+    return runCLI(argc, argv);
 }

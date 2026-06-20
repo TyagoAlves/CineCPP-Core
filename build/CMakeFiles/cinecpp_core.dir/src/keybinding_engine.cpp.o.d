@@ -1,4 +1,4 @@
-CMakeFiles/cinecpp.dir/src/keybinding_engine.cpp.o: \
+CMakeFiles/cinecpp_core.dir/src/keybinding_engine.cpp.o: \
  /src/src/keybinding_engine.cpp /usr/include/stdc-predef.h \
  /src/include/keybinding_engine.h /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
