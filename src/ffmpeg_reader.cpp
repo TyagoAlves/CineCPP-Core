@@ -106,9 +106,11 @@ Frame FFmpegReader::readFrame() {
                 f.width = avf->width;
                 f.height = avf->height;
                 f.pts = avf->pts * av_q2d(((AVFormatContext*)fmt_ctx_)->streams[video_stream_idx_]->time_base);
-                size_t size = avf->width * avf->height * 3;
+                int linesize = avf->linesize[0];
+                size_t size = avf->height * linesize;
                 f.data.resize(size);
-                std::memcpy(f.data.data(), avf->data[0], size);
+                for (int y = 0; y < avf->height; y++)
+                    std::memcpy(f.data.data() + y * linesize, avf->data[0] + y * linesize, linesize);
                 av_packet_free(&packet);
                 return f;
             }

@@ -1,1 +1,0 @@
-/usr/bin/c++  -O2 -march=x86-64-v3 CMakeFiles/cinecpp.dir/src/main.cpp.o -o cinecpp  libcinecpp_core.a 

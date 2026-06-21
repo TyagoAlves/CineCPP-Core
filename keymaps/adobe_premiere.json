@@ -20,7 +20,6 @@
     {"key": "T", "action": "text_tool", "mod": "", "desc": "Ferramenta texto"},
     {"key": "P", "action": "pen_tool", "mod": "", "desc": "Caneta"},
     {"key": "H", "action": "hand_tool", "mod": "", "desc": "Mao"},
-    {"key": "Z", "action": "zoom_tool", "mod": "Ctrl", "desc": "Zoom (com Ctrl)"},
     {"key": "Z", "action": "undo", "mod": "Ctrl", "desc": "Desfazer"},
     {"key": "S", "action": "save", "mod": "Ctrl", "desc": "Salvar"},
     {"key": "N", "action": "new_project", "mod": "Ctrl", "desc": "Novo projeto"}
